@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<h2>这是一个新闻组件</h2>
+
+{{title}}
+
+<br>
+<br>
+
+{{msg}}
+
+<br>
+<br>
+
+{{msg1}}  {{username}}
+
+<br>
+<br>
+
+<!--绑定属性 -->
+<div title="{{msg}}">这是一个div</div>
+
+<div [title]="msg">这是一个div</div>
+
+<br>
+<br>
+
+{{h}}
+
+<br>
+<br>
+
+<span [innerHTML] = "h"></span>
+<span innerHTML ="{{h}}"></span>
+
+{{obj.name}}
+
+<ul>
+  <li *ngFor="let item of list;let key = index">
+    {{item}} -- {{key}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of list1">
+      {{item.name}}
+      </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of list2">
+      {{item.catname}}
+      <ol>
+        <li *ngFor="let car of item.list">
+          {{car.title}}
+        </li>
+      </ol>
+    </li>
+</ul>

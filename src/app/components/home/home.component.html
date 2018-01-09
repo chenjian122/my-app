@@ -1,0 +1,32 @@
+{{msg}} 
+
+<button (click)='getMsg()'>执行方法</button>
+
+<hr>
+
+{{name}}
+
+<button (click)='setName()'>改变名字</button>
+
+<hr>
+
+<div *ngIf="flag">
+
+  flag = true
+</div>
+<button (click)='flag =!flag'>改变flag的值</button>
+
+<hr>
+
+<input type="text" (keyup)='keyupFn($event)'>
+
+<button (click)='keyupFn($event)' >事件</button>
+
+<br>
+<br>
+<!-- 双向数据绑定 -->
+<input type="text" [(ngModel)] = "search">
+
+{{search}}
+
+<button (click)='run()'>获取input值</button>
